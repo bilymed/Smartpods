@@ -1,0 +1,38 @@
+.toolbar {
+  position: relative;
+  z-index: 2;
+  color: white;
+  //background origin: #1eb0ff;
+  //background active: #0277bd;
+  background: #039be5;
+  height: 55px;
+}
+
+::ng-deep.mat-menu-panel {
+  max-width: none !important;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-button {
+  margin: 10px 20px 0 10px;
+  height: 100px;
+}
+
+.profile-image {
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  //margin-right: 10px;
+}
+
+.profile-name {
+  margin-left: 20px;
+  //margin-bottom: 50px;
+}

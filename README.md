@@ -1,0 +1,1 @@
+# Smartpods app using Anguler 12

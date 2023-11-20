@@ -1,0 +1,69 @@
+<!--<mat-tab-group animationDuration="0ms">-->
+<!--  <mat-tab label="First">Content 1</mat-tab>-->
+<!--  <mat-tab label="Second">Content 2</mat-tab>-->
+<!--  <mat-tab label="Third">Content 3</mat-tab>-->
+<!--</mat-tab-group>-->
+<section>
+  <div class="button-row">
+    <button mat-button (click)="edit = !edit" color="primary">
+      <span *ngIf="edit"><mat-icon>save</mat-icon> Enregistrer</span>
+      <span *ngIf="!edit"><mat-icon>edit</mat-icon> Modifier</span>
+    </button>
+    |
+    <button mat-button color="primary">Primary</button>
+    |
+    <button mat-button color="accent">Accent</button>
+    |
+    <button mat-button color="warn">Warn</button>
+    |
+    <mat-divider></mat-divider>
+  </div>
+</section>
+<div class="row" style="margin: 20px 5px">
+  <div class="col-4">
+    <img src="assets/avatar.png" alt="Avatar" class="profile-image">
+  </div>
+  <div class="col-8" style="margin: 0 auto">
+    <div *ngIf="!edit; else elseBlock">
+      <h2><p>{{ user?.name }}</p></h2>
+      <p class="mat-body-2" style="margin: 5px auto">{{ user?.email }}</p>
+      <p>{{ user?.department }}</p>
+    </div>
+    <ng-template #elseBlock>
+      <mat-form-field appearance="standard" style="width: 300px">
+        <mat-label>Name</mat-label>
+        <input matInput value="{{ user?.name }}">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="standard" style="width: 300px">
+        <mat-label>Email</mat-label>
+        <input matInput value="{{ user?.email }}">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="standard" style="width: 300px">
+        <mat-label>Department</mat-label>
+        <input matInput value="{{ user?.department }}">
+      </mat-form-field>
+    </ng-template>
+  </div>
+</div>
+
+<mat-divider style="margin: 20px 0"></mat-divider>
+<div *ngIf="!edit; else elseBlock2">
+  <label class="mat-body-strong">Department</label>
+  <p>{{ user?.department }}</p>
+</div>
+<ng-template #elseBlock2>
+  <mat-form-field appearance="standard" style="width: 500px">
+    <mat-label>Description</mat-label>
+    <textarea matInput> {{ user?.department }} </textarea>
+  </mat-form-field>
+</ng-template>
+<!--<h2>-->
+<!--  <mat-icon class="h2-icon-size">person</mat-icon>  div-->
+<!--</h2>-->
+
+
+
+
+

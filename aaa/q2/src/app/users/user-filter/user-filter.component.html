@@ -1,0 +1,40 @@
+<div class="container" style="margin-top: 10px">
+  <h2>Filter Users</h2>
+  <mat-divider style="margin: 20px 0"></mat-divider>
+  <form [formGroup]="filterFormGroup">
+    <mat-form-field appearance="fill" style="width: 300px">
+      <mat-label>Search By Name</mat-label>
+      <input placeholder="Search By Name" matInput>
+    </mat-form-field>
+    <mat-divider style="margin: 20px 0"></mat-divider>
+    <mat-form-field appearance="fill">
+      <mat-label>Select Department</mat-label>
+      <mat-select
+        #departmentSelect
+        (selectionChange)="setSelectedDepartment($event)"
+        formControlName="departmentForm">
+        <mat-option *ngFor="let department of departments$ | async" [value]="department">
+          {{department}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-divider style="margin: 20px 0"></mat-divider>
+    <label id="example-radio-group-label">Employee Status</label>
+    <mat-radio-group
+      #radioGroupStatus
+      (change)="setRadioGroupStatus($event)"
+      formControlName="statusForm"
+      aria-labelledby="radio-group-label"
+      class="radio-group">
+      <mat-radio-button class="radio-button" value="0">
+        All Status
+      </mat-radio-button>
+      <mat-radio-button class="radio-button" value="1">
+        Active
+      </mat-radio-button>
+      <mat-radio-button class="radio-button" value="2">
+        Not Active
+      </mat-radio-button>
+    </mat-radio-group>
+  </form>
+</div>

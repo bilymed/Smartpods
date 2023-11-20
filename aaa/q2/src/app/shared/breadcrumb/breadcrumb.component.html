@@ -1,0 +1,12 @@
+<nav aria-label="breadcrumb">
+  <ul *ngIf="breadcrumbs$ | async as breadcrumbs" class="breadcrumb">
+    <ng-container *ngFor="let breadcrumb of breadcrumbs; index as i">
+      <li *ngIf="breadcrumb.label != ''" class="breadcrumb-item">
+         <a routerLink="{{breadcrumb.url}}">
+           <span style="margin-right: 15px">{{breadcrumb.label}}</span>
+           <mat-icon>navigate_next</mat-icon>
+         </a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>

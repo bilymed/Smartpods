@@ -1,0 +1,26 @@
+.breadcrumb {
+  //flex-wrap: wrap;
+  padding: 12px 0;
+  //margin: 12px 12px;
+  list-style: none;
+  //background-color: #e9ecef;
+  //border-radius: .25rem;
+}
+
+.breadcrumb li {
+  margin: 5px;
+  display: inline;
+}
+
+.breadcrumb a {
+  color: #007bff;
+  padding: 5px 7px;
+  text-decoration:none;
+  background-color: #f9f9f9;
+  border-radius: .25rem;
+}
+
+.breadcrumb .mat-icon {
+  color: #007bff;
+  vertical-align: middle;
+}

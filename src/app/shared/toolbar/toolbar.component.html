@@ -1,0 +1,29 @@
+<mat-toolbar class="toolbar mat-elevation-z3">
+<!--  <button mat-icon-button (click)="toggleLeftSideNav()">-->
+<!--    <mat-icon>menu</mat-icon>-->
+<!--  </button>-->
+  <button mat-button class="navbar-brand" (click)="toggleLeftSideNav()">
+    <img src="/assets/logo.png" alt="" width="auto" height="24">
+  </button>
+  <span></span>
+  <span class="spacer"></span>
+  <button mat-button [matMenuTriggerFor]="beforeMenu">
+    <img src="assets/avatar.png" alt="Avatar" class="avatar">
+  </button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before" style="width: 300px">
+    <div class="profile-button">
+      <div class="row">
+        <div class="col-4">
+          <img src="assets/avatar.png" alt="Avatar" class="profile-image">
+        </div>
+        <div class="col-8" style="margin: 0 auto">
+         <div class="mat-body-2" style="margin: 5px auto"> ELBAKKALI Mohammed</div>
+          <div> Software developer</div>
+        </div>
+      </div>
+<!--      <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>-->
+    </div>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+</mat-toolbar>

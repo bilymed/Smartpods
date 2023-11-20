@@ -1,0 +1,7 @@
+<app-toolbar (toggleEvent)="toggleLeftSideNav($event)"></app-toolbar>
+<app-sidenav [leftSideNavOpened]="leftSideNavOpened">
+  <div class="container-fluid" style="height: 100%; margin-top: 2px">
+    <app-breadcrumb></app-breadcrumb>
+    <router-outlet></router-outlet>
+  </div>
+</app-sidenav>
